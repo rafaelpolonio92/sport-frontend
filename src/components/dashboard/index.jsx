@@ -1,6 +1,6 @@
-import React, { useState } from 'react';
+import React from 'react';
 import MediaCard from '../Cards';
-import { Grid, Box, Container } from '@mui/material';
+import { Grid, Box, Container, Typography } from '@mui/material';
 import { drawerWidth } from '../Sidebar/styles';
 
 const cards = [
@@ -24,23 +24,51 @@ const cards = [
 ];
 
 const Dashboard = () => {
-  return (  
-    <Box component="main" sx={{ flexGrow: 1, p: 3, backgroundColor: '#d0dff7', }}>
-      <Container style={{ marginTop: drawerWidth }}>
-        <Grid container spacing={3}>
-          {cards.map((card, index) => (
-              <Grid item key={index} xs={12} sm={6} md={4}>
-                <MediaCard
-                  title={card.title}
-                  description={card.description}
-                  imageUrl={card.imageUrl}
-                  videoUrl={card.videoUrl}
-                />
-              </Grid>
-            ))}
-        </Grid>
-      </Container>
-    </Box>
+  return (
+    <>
+    <Box 
+      component="main" 
+      sx={{ 
+        flexGrow: 1,
+        p: 3,
+        marginLeft: 30
+      }}>
+        <Container style={{ marginTop: drawerWidth }}>
+          <Typography 
+            variant="h1" 
+            style={{ 
+              fontFamily: 'Anton, sans-serif',
+              fontSize: '70px', 
+              textAlign: 'center' 
+            }}>
+            IMPROVE YOUR SKATEBOARDING
+          </Typography>
+        </Container>
+      </Box>
+      <Box 
+        component="main" 
+        sx={{ 
+          flexGrow: 1, 
+          p: 3, 
+          // backgroundColor: '#163b3b', 
+          marginLeft: 30
+        }}>
+        <Container>
+          <Grid container spacing={3}>
+            {cards.map((card, index) => (
+                <Grid item key={index} xs={12} sm={6} md={4}>
+                  <MediaCard
+                    title={card.title}
+                    description={card.description}
+                    imageUrl={card.imageUrl}
+                    videoUrl={card.videoUrl}
+                  />
+                </Grid>
+              ))}
+          </Grid>
+        </Container>
+      </Box>
+    </>
   )
 }
 
