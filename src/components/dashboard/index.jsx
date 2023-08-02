@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import MediaCard from '../Cards';
 import { Grid, Box, Container } from '@mui/material';
 import { drawerWidth } from '../Sidebar/styles';
@@ -8,6 +8,7 @@ const cards = [
     title: 'Ollie',
     description: 'Card description 1',
     imageUrl: '/skateboard-trick-tipp-ollie.jpg',
+    videoUrl: 'https://www.youtube.com/embed/Jig3uiYsb4w'
   },
   {
     title: 'Test',
@@ -23,16 +24,17 @@ const cards = [
 ];
 
 const Dashboard = () => {
-  return (
-    <Box component="main" sx={{ flexGrow: 1, p: 3, paddingLeft: 30, backgroundColor: '#d0dff7', }}>
+  return (  
+    <Box component="main" sx={{ flexGrow: 1, p: 3, backgroundColor: '#d0dff7', }}>
       <Container style={{ marginTop: drawerWidth }}>
-        <Grid container spacing={3} justifyContent="center" alignItems="center">
+        <Grid container spacing={3}>
           {cards.map((card, index) => (
               <Grid item key={index} xs={12} sm={6} md={4}>
                 <MediaCard
                   title={card.title}
                   description={card.description}
                   imageUrl={card.imageUrl}
+                  videoUrl={card.videoUrl}
                 />
               </Grid>
             ))}
