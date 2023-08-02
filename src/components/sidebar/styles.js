@@ -26,12 +26,13 @@ export const closedMixin = (theme) => ({
 });
 
 export const DrawerHeader = styled('div')(({ theme }) => ({
-  display: 'flex',
-  alignItems: 'center',
-  justifyContent: 'flex-end',
-  padding: theme.spacing(0, 1),
-  ...theme.mixins.toolbar,
-}));
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'center',
+    padding: theme.spacing(0, 1),
+    height: '200px',
+    ...theme.mixins.toolbar,
+  }));
 
 export const AppBar = styled(MuiAppBar, {
   shouldForwardProp: (prop) => prop !== 'open',
@@ -42,6 +43,10 @@ export const AppBar = styled(MuiAppBar, {
     easing: theme.transitions.easing.sharp,
     duration: theme.transitions.duration.leavingScreen,
   }),
+  height: '200px',
+  backgroundImage: 'url(/Banner-skateboards.jpg)', // Accessing the image from the public folder
+  backgroundSize: 'cover', // Cover the entire Drawer
+  backgroundPosition: 'center', // Center the image
   ...(open && {
     marginLeft: drawerWidth,
     width: `calc(100% - ${drawerWidth}px)`,
@@ -58,14 +63,14 @@ export const Drawer = styled(MuiDrawer, { shouldForwardProp: (prop) => prop !== 
     flexShrink: 0,
     whiteSpace: 'nowrap',
     boxSizing: 'border-box',
-    background: '#303030', // Set the color here
+    background: '#000000', // Set the color here
     ...(open && {
       ...openedMixin(theme),
-      '& .MuiDrawer-paper': { ...openedMixin(theme), background: '#303030' }, // Set the color here
+      '& .MuiDrawer-paper': { ...openedMixin(theme), background: '#000000' }, // Set the color here
     }),
     ...(!open && {
       ...closedMixin(theme),
-      '& .MuiDrawer-paper': { ...closedMixin(theme), background: '#303030' }, // Set the color here
+      '& .MuiDrawer-paper': { ...closedMixin(theme), background: '#000000' }, // Set the color here
     }),
   }),
 );
