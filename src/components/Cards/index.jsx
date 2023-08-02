@@ -29,9 +29,11 @@ const MediaCard = ({ title, description, imageUrl, videoUrl }) => {
         <Typography gutterBottom variant="h5" component="div" sx={{ color: '#fff', fontWeight: 'bold' }}>
           {title}
         </Typography>
-        <Typography variant="body2" color="text.secondary" sx={{ color: '#b5b3b3', fontWeight: 'bold' }}>
-          {description}
-        </Typography>
+        <Box style={{ height: '130px', overflow: 'hidden' }}>
+          <Typography variant="body2" color="text.secondary" sx={{ color: '#b5b3b3', fontWeight: 'bold' }}>
+            {description}
+          </Typography>
+        </Box>
       </CardContent>
       <CardActions>
         <Button variant="contained" size="small" onClick={() => handleModalOpen(videoUrl)} >Learn More</Button>
