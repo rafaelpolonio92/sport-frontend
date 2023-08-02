@@ -54,7 +54,7 @@ export default function MiniDrawer() {
       </AppBar>
       <Drawer variant="permanent" open={open}>
         <DrawerHeader>
-          <img src="/born-to-skate-skateboard-design-vintage-retro-vector.jpg" alt="Logo" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+          <img src="/HD-wallpaper-vans-brand-logo-skate.jpg" alt="Logo" style={{ width: '100%', height: '70%', objectFit: 'cover' }} />
           <IconButton onClick={handleDrawerClose} style={{ color: 'white' }}>
             {theme.direction === 'rtl' ? <ChevronRightIcon /> : <ChevronLeftIcon />}
           </IconButton>
