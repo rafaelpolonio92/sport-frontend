@@ -5,30 +5,24 @@ import { drawerWidth } from '../Sidebar/styles';
 
 const cards = [
   {
-    title: 'Card Title 1',
+    title: 'Ollie',
+    description: 'Card description 1',
+    imageUrl: '/skateboard-trick-tipp-ollie.jpg',
+  },
+  {
+    title: 'Test',
     description: 'Card description 1',
     imageUrl: '/49ea5d387a6e396de24cb831f23c3cbd.jpg',
   },
   {
-    title: 'Card Title 1',
-    description: 'Card description 1',
-    imageUrl: '/49ea5d387a6e396de24cb831f23c3cbd.jpg',
-  },
-  {
-    title: 'Card Title 1',
-    description: 'Card description 1',
-    imageUrl: '/49ea5d387a6e396de24cb831f23c3cbd.jpg',
-  },
-  {
-    title: 'Card Title 2',
+    title: 'Kickflip',
     description: 'Card description 2',
-    imageUrl: '/born-to-skate-skateboard-design-vintage-retro-vector.jpg',
+    imageUrl: '/360_F_96346832_fm7HVHqQHnGpsArG2TigUUeEYPsOrRvN.jpg',
   },
   // Add more card objects here
 ];
 
-const Dashboard = (props) => {
-  const open = true;
+const Dashboard = () => {
   return (
     <Box component="main" sx={{ flexGrow: 1, p: 3, paddingLeft: 30 }}>
       <Container style={{ marginTop: drawerWidth }}>
