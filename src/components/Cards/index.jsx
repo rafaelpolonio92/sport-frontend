@@ -15,7 +15,7 @@ const MediaCard = ({ title, description, imageUrl }) => (
         <Typography gutterBottom variant="h5" component="div" sx={{ color: '#fff', fontWeight: 'bold' }}>
           {title}
         </Typography>
-        <Typography variant="body2" color="text.secondary" sx={{ color: '#fff', fontWeight: 'bold' }}>
+        <Typography variant="body2" color="text.secondary" sx={{ color: '#b5b3b3', fontWeight: 'bold' }}>
           {description}
         </Typography>
       </CardContent>

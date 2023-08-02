@@ -27,13 +27,12 @@ const cards = [
   // Add more card objects here
 ];
 
-
 const Dashboard = (props) => {
-  const { open } = props;
+  const open = true;
   return (
-    <Box component="main" sx={{ flexGrow: 1, p: 3, paddingLeft: open ? drawerWidth + 3 : 3 }}>
-      <Container style={{ marginTop: 220 }}>
-        <Grid container spacing={3} alignItems="center">
+    <Box component="main" sx={{ flexGrow: 1, p: 3, paddingLeft: 30 }}>
+      <Container style={{ marginTop: drawerWidth }}>
+        <Grid container spacing={3} justifyContent="center" alignItems="center">
           {cards.map((card, index) => (
               <Grid item key={index} xs={12} sm={6} md={4}>
                 <MediaCard
