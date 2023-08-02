@@ -30,7 +30,7 @@ export const DrawerHeader = styled('div')(({ theme }) => ({
     alignItems: 'center',
     justifyContent: 'center',
     padding: theme.spacing(0, 1),
-    height: '200px',
+    height: '220px',
     ...theme.mixins.toolbar,
   }));
 
@@ -43,7 +43,7 @@ export const AppBar = styled(MuiAppBar, {
     easing: theme.transitions.easing.sharp,
     duration: theme.transitions.duration.leavingScreen,
   }),
-  height: '200px',
+  height: '220px',
   backgroundImage: 'url(/Banner-skateboards.jpg)', // Accessing the image from the public folder
   backgroundSize: 'cover', // Cover the entire Drawer
   backgroundPosition: 'center', // Center the image
