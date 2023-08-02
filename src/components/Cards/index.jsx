@@ -17,7 +17,7 @@ const MediaCard = ({ title, description, imageUrl, videoUrl }) => {
 
   console.log(modalOpen)
   return (
-  <MatteBlackCard sx={{ maxWidth: 345, borderRadius: '20px' }}>
+  <MatteBlackCard sx={{ maxWidth: 345, borderRadius: '11px' }}>
     <CardActionArea>
       <CardMedia
         component="img"
@@ -34,8 +34,7 @@ const MediaCard = ({ title, description, imageUrl, videoUrl }) => {
         </Typography>
       </CardContent>
       <CardActions>
-        <Button size="small">Share</Button>
-        <Button size="small" onClick={() => handleModalOpen(videoUrl)} >Learn More</Button>
+        <Button variant="contained" size="small" onClick={() => handleModalOpen(videoUrl)} >Learn More</Button>
       </CardActions>
     </CardActionArea>
 
