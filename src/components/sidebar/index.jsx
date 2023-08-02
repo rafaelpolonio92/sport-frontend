@@ -85,7 +85,7 @@ export default function MiniDrawer() {
           ))}
         </List>
       </Drawer>
-      <Box component="main" sx={{ flexGrow: 1, p: 3 }}>
+      {/* <Box component="main" sx={{ flexGrow: 1, p: 3 }}>
         <DrawerHeader />
         <Typography paragraph>
           a
@@ -93,7 +93,7 @@ export default function MiniDrawer() {
         <Typography paragraph>
           b
         </Typography>
-      </Box>
+      </Box> */}
     </Box>
   );
 }

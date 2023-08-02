@@ -8,9 +8,9 @@ function App() {
     <Router>
       <Layout>
         <Routes>
-        <Route path="/" component={< Dashboard />} />
-          {/* ... other routes */}
-        </Routes>
+          <Route path="/" element={<Dashboard />} />
+            {/* ... other routes */}
+          </Routes>
       </Layout>
     </Router>
   );
