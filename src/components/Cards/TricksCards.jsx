@@ -18,27 +18,25 @@ const MediaCard = ({ title, description, imageUrl, videoUrl }) => {
   console.log(modalOpen)
   return (
   <MatteBlackCard sx={{ maxWidth: 345, borderRadius: '11px' }}>
-    <CardActionArea>
-      <CardMedia
-        component="img"
-        alt={title}
-        height="240"
-        image={imageUrl}
-      />
-      <CardContent>
-        <Typography gutterBottom variant="h5" component="div" sx={{ color: '#fff', fontWeight: 'bold' }}>
-          {title}
+    <CardMedia
+      component="img"
+      alt={title}
+      height="240"
+      image={imageUrl}
+    />
+    <CardContent>
+      <Typography gutterBottom variant="h5" component="div" sx={{ color: '#fff', fontWeight: 'bold' }}>
+        {title}
+      </Typography>
+      <Box style={{ height: '130px', overflow: 'hidden' }}>
+        <Typography variant="body2" color="text.secondary" sx={{ color: '#b5b3b3', fontWeight: 'bold' }}>
+          {description}
         </Typography>
-        <Box style={{ height: '130px', overflow: 'hidden' }}>
-          <Typography variant="body2" color="text.secondary" sx={{ color: '#b5b3b3', fontWeight: 'bold' }}>
-            {description}
-          </Typography>
-        </Box>
-      </CardContent>
-      <CardActions>
-        <Button variant="contained" size="small" onClick={() => handleModalOpen(videoUrl)} >Learn More</Button>
-      </CardActions>
-    </CardActionArea>
+      </Box>
+    </CardContent>
+    <CardActions>
+      <Button variant="contained" size="small" onClick={() => handleModalOpen(videoUrl)} >Learn More</Button>
+    </CardActions>
 
     <Modal open={modalOpen} onClose={handleModalClose}>
         <Box
