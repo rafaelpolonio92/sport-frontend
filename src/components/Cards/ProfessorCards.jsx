@@ -3,26 +3,14 @@ import { CardContent, CardMedia, Typography, CardActions, Button, Modal, Box } f
 import { WhiteCard } from './styles';
 
 const ProfessorCard = ({ title, description, imageUrl, videoUrl }) => {
-  const [modalOpen, setModalOpen] = useState(false);
-  const [selectedVideo, setSelectedVideo] = useState('');
-
-  const handleModalOpen = (videoUrl) => {
-    setSelectedVideo(videoUrl);
-    setModalOpen(true)
-  }
-
-  const handleModalClose = () => {
-    setModalOpen(false)
-  }
-
-  console.log(modalOpen)
   return (
     <WhiteCard sx={{ maxWidth: 345, borderRadius: '11px' }}>
         <CardMedia
-        component="img"
-        alt={title}
-        height="240"
-        image={imageUrl}
+          component="img"
+          alt={title}
+          height="240"
+          image={imageUrl}
+          style={{ objectFit: 'cover', objectPosition: 'center 1.5%' }}
         />
         <CardContent>
           <Typography gutterBottom variant="h5" component="div" sx={{ color: '#00000', fontWeight: 'bold' }}>
@@ -35,7 +23,7 @@ const ProfessorCard = ({ title, description, imageUrl, videoUrl }) => {
           </Box>
         </CardContent>
         <CardActions>
-          <Button variant="contained" size="small" onClick={() => handleModalOpen(videoUrl)} >Learn More</Button>
+          <Button variant="contained" size="small" onClick={() => console.log('rafael')} >Learn More</Button>
         </CardActions>
     </WhiteCard>
   )

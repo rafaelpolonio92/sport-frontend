@@ -33,12 +33,12 @@ const professorCards = [
   {
     title: 'Test',
     description: 'Card description 1',
-    imageUrl: '/Nyjah-Huston-Olympic-Player-PNG-HD.png',
+    imageUrl: '/Rayssa.webp',
   },
   {
     title: 'Kickflip',
     description: "The kickflip is a skateboarding trick, in which the rider flips their skateboard 360° along the axis that extends from the nose to the tail of the deck. When the rider is regular footed the board spins counter-clockwise if viewed from the side.",
-    imageUrl: '/Nyjah-Huston-Olympic-Player-PNG-HD.png',
+    imageUrl: '/kelvinhoefler.png',
   },
   // Add more card objects here
 ];
