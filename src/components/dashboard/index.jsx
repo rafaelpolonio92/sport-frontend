@@ -24,7 +24,7 @@ const cards = [
 
 const Dashboard = () => {
   return (
-    <Box component="main" sx={{ flexGrow: 1, p: 3, paddingLeft: 30 }}>
+    <Box component="main" sx={{ flexGrow: 1, p: 3, paddingLeft: 30, backgroundColor: '#d0dff7', }}>
       <Container style={{ marginTop: drawerWidth }}>
         <Grid container spacing={3} justifyContent="center" alignItems="center">
           {cards.map((card, index) => (
