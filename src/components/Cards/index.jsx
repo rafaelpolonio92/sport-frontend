@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import YouTube from 'react-youtube';
 import { CardActionArea, CardContent, CardMedia, Typography, CardActions, Button, Modal, Box } from '@mui/material';
 import { MatteBlackCard } from './styles';
 
@@ -52,13 +51,15 @@ const MediaCard = ({ title, description, imageUrl, videoUrl }) => {
               outline: 'none',
             }}
           >
-           <YouTube 
-            videoId="Jig3uiYsb4w" 
-            opts={{ 
-              width: '560', 
-              height: '315', 
-              playerVars: { autoplay: 1} 
-            }} />
+            <iframe
+              width="660"
+              height="415"
+              src={selectedVideo + "?autoplay=1&mute=0"} // Adding autoplay and mute options
+              title="YouTube video player"
+              frameBorder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowFullScreen
+            ></iframe>
           </Box>
       </Modal>
   </MatteBlackCard>
