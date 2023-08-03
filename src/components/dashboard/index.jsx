@@ -29,16 +29,19 @@ const professorCards = [
     title: 'Nyjah Huston',
     description: "Nijah",
     imageUrl: '/Nyjah-Huston-Olympic-Player-PNG-HD.png',
+    rating: '5'
   },
   {
-    title: 'Test',
+    title: 'Rayssa Leal',
     description: 'Card description 1',
     imageUrl: '/Rayssa.webp',
+    rating: '5'
   },
   {
-    title: 'Kickflip',
+    title: 'Kelvin Hoefler',
     description: "The kickflip is a skateboarding trick, in which the rider flips their skateboard 360° along the axis that extends from the nose to the tail of the deck. When the rider is regular footed the board spins counter-clockwise if viewed from the side.",
     imageUrl: '/kelvinhoefler.png',
+    rating: '5'
   },
   // Add more card objects here
 ];
@@ -122,6 +125,7 @@ const Dashboard = () => {
                     description={card.description}
                     imageUrl={card.imageUrl}
                     videoUrl={card.videoUrl}
+                    rating={card.rating}
                   />
                 </Grid>
               ))}
