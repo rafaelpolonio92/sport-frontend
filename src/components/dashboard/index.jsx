@@ -1,6 +1,7 @@
 import React from 'react';
 import MediaCard from '../Cards/TricksCards';
 import ProfessorCard from '../Cards/ProfessorCards';
+import NearbySkateparks from '../Maps/Skateparks';
 import { Grid, Box, Container, Typography } from '@mui/material';
 import { drawerWidth } from '../Sidebar/styles';
 
@@ -129,6 +130,38 @@ const Dashboard = () => {
                   />
                 </Grid>
               ))}
+          </Grid>
+        </Container>
+      </Box>
+      <Box 
+        component="main" 
+        sx={{ 
+          flexGrow: 1,
+          p: 3,
+          marginLeft: 30
+        }}>
+        <Container style={{ marginTop: 50 }}>
+          <Typography 
+            variant="h1" 
+            style={{ 
+              fontFamily: 'Anton, sans-serif',
+              fontSize: '70px', 
+              textAlign: 'center' 
+            }}>
+            FIND SKATEPARKS NEARBY
+          </Typography>
+        </Container>
+      </Box>
+      <Box 
+        component="main" 
+        sx={{ 
+          flexGrow: 1, 
+          p: 3, 
+          marginLeft: 30
+        }}>
+        <Container>
+          <Grid container spacing={3}>
+            <NearbySkateparks />
           </Grid>
         </Container>
       </Box>
