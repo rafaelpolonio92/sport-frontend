@@ -4,7 +4,7 @@ import { containerStyle } from './styles';
 
 const NearbySkateparks = () => {
   const { isLoaded, loadError } = useJsApiLoader({
-    googleMapsApiKey: "AIzaSyC9Hp_NMId2W3a7Q03VyTfMqy5406E8YZc",
+    googleMapsApiKey: process.env.REACT_APP_GOOGLE_MAPS_API_KEY,
     libraries: ["places"],
   });
 
